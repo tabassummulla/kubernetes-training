@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-express-app
+spec:
+  selector:
+    matchLabels:
+      app: my-express-app
+  template:
+    metadata:
+      labels:
+        app: my-express-app
+    spec:
+      containers:
+      - name: my-express-app
+        image: <Image>
+        ports:
+        - containerPort: 8080
